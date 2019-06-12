@@ -1,0 +1,71 @@
+﻿<Window x:Class="Sanja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sanja.Forme"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="IStransport" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        FontFamily="{DynamicResource MaterialDesignFont}"    
+        Background="{DynamicResource MaterialDesignPaper}">
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" Height="60"  VerticalAlignment="Top" Background="#FF8C25A6">
+            <TextBlock Text="NT Transport" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Baskerville Old Face"/>
+            <Button x:Name="btnExit" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnExit_Click" >
+                <materialDesign:PackIcon Kind="Power"/>
+            </Button>
+        </Grid>
+
+        <Menu Grid.Row="1" IsMainMenu="True">
+            <MenuItem Header="LJUDSKI RESURSI">
+                
+            </MenuItem>
+
+            <MenuItem Header="ODRZAVANJE VOZILA">
+                
+            </MenuItem>
+
+            <MenuItem Header="FINANSIJE">
+                
+            </MenuItem>
+
+            <MenuItem Header="UPRAVLJANJE TRANSPORTOM">
+                <MenuItem x:Name="miDodajVozilo" Header="VOZILA">
+                    <MenuItem x:Name="miDodajCisternu" Header="KAMIONI" Click="MiDodajKamion_Click"/>
+                    <MenuItem x:Name="miDodajKamion" Header="CISTERNE" Click="MiDodajCisternu_Click"/>
+                </MenuItem>
+                    <MenuItem x:Name="miDodajVozaca" Header="VOZACI" Click="MiDodajVozaca_Click"/>
+                <MenuItem x:Name="miDodajFakturu" Header="OTPREMNICE" Click="MiDodajOtpremnicu_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="POMOC" Click="MiHelp_Click">
+                
+            </MenuItem>
+        </Menu>
+
+        <local:DodajVozaca x:Name="DodajVozaca" Grid.Row="2" Visibility="Hidden"/>
+        <local:DodajKamion x:Name="DodajKamion" Grid.Row="2" Visibility="Hidden"/>
+        <local:DodajCisternu x:Name="DodajCisternu" Grid.Row="2" Visibility="Hidden"/>
+        <local:Otpremnica x:Name="Otpremnica" Grid.Row="2" Visibility="Hidden"/>
+        <local:ListaKamiona x:Name="ListaKamiona" Grid.Row="2" Visibility="Hidden"/>
+        <local:ListaCisterna x:Name="ListaCisterni" Grid.Row="2" Visibility="Hidden"/>
+        <local:ListaVozaca x:Name="ListaVozaca" Grid.Row="2" Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>
+

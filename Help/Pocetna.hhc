@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pocetna">
+		<param name="Local" value="Pocetna.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dodavanje Cisterne">
+		<param name="Local" value="DodavanjeCisterne.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dodavanje Kamiona">
+		<param name="Local" value="DodavanjeKamiona.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dodavanje Vozaca">
+		<param name="Local" value="DodavanjeVozaca.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Lista Vozaca">
+		<param name="Local" value="ListaVozaca.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Lista Kamiona">
+		<param name="Local" value="ListaKamiona.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Lista Cisterni">
+		<param name="Local" value="ListaCisterni.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

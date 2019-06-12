@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Sanja.Forme.ListaKamiona"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sanja.Forme"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="490" d:DesignWidth="1080">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="20" FontWeight="Bold" Text="Lista kamiona" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,5,5">
+            
+        </TextBlock>
+
+        <DataGrid x:Name="dataKamioni" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="7"  Margin="5,5,5,5" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Registracioni broj"  Binding="{Binding Registracija}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tip"  Binding="{Binding Tip}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Vazenje registracije"  Binding="{Binding RegDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Kilometraza"  Binding="{Binding Kilometraza}"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="Raspoloziv"  Binding="{Binding Raspolozivo}"></DataGridCheckBoxColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DockPanel Grid.Row="1" Grid.Column="2">
+            <TextBox DockPanel.Dock="Left"  x:Name="tbPretraga" Text="{Binding Path=Pretraga, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" FontSize="15" Margin="5,5,5,5" materialDesign:HintAssist.Hint="Pretrazi po registraciji" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="240" />
+            <Button x:Name="btnPretraga" DockPanel.Dock="Right" Content="Pretrazi" Width="100" HorizontalAlignment="Right" Margin="0,8,10,-8" Style="{StaticResource MaterialDesignRaisedAccentButton}" Click="BtnPretraga_Click"/>
+        </DockPanel>
+
+        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Button_Click_1">
+            IZMENI
+        </Button>
+
+        <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Button_Click_2">
+            OBRISI
+        </Button>
+
+        <Button Grid.Row="5" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Button_Click">
+            NAZAD
+        </Button>
+
+
+    </Grid>
+</UserControl>
